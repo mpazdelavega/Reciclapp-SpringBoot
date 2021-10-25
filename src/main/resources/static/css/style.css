@@ -219,6 +219,14 @@ h5 {
   color: var(--white-color);
 }
 
+.book-food{
+  width:100%;
+  background:url('../images/bg/bg-3.jpg') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position:0 71.9125px;
+  padding:4.375rem 0
+}
 /*
 ==========================================
    Header Design
@@ -435,14 +443,7 @@ FAQ section Design
   font-size: 1.875rem;
   margin-right:0.3125rem;
 } 
-.book-food{
-  width:100%;
-  background:url('../images/bg/bg-3.jpg') no-repeat center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position:0 71.9125px;
-  padding:4.375rem 0
-}
+
 
 /* Form Control */
 .newsletter{
@@ -974,3 +975,9 @@ footer section Design
       font-size: 75%
   }
 }
+
+#map {
+	height: 500px;
+	width: 100%;
+}
+

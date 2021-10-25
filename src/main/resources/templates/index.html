@@ -2,449 +2,484 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="Description" content="Enter your description here" />
-  <link rel="icon"  type="image/icon" th:href="@{/images/reciclar.ico}">
-  <title>Reciclaje App</title>
-  <!-- bootstrap CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-  <!--Carousel CSS-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- OWN CSS -->
-  <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"></link>
-  <link rel="stylesheet" type="text/css" th:href="@{/css/responsive-style.css}"></link>
-  <link rel="stylesheet" type="text/css" th:href="@{/css/fonts.css}"></link>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here" />
+<link rel="icon" type="image/icon" th:href="@{/images/reciclar.ico}">
+<title>Reciclaje App</title>
+<!-- bootstrap CDN -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<!--Carousel CSS-->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+	integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+	integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- OWN CSS -->
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"></link>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/responsive-style.css}"></link>
+<link rel="stylesheet" type="text/css" th:href="@{/css/fonts.css}"></link>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 </head>
 
 <body>
-  <!--Barra Social-->
-  <div class="social">
-    <ul>
-      <li><a href="" class="icon-gmail" target="_blank"></a></li>
-      <li><a href="" class="icon-phone" target="_blank"></a></li>
-      <li><a href="https://wa.me/56978929295" class="icon-whatsapp" target="_blank"></a></li>
-      <li><a href="" class="icon-instagram" target="_blank"></a></li>
-    </ul>
-  </div>
-  <!-- header design -->
-  <header>
-    <div id="header-information" class="container">
-      
-    </div>
+	<!--Barra Social-->
+	<div class="social">
+		<ul>
+			<li><a href="" class="icon-gmail" target="_blank"></a></li>
+			<li><a href="" class="icon-phone" target="_blank"></a></li>
+			<li><a href="https://wa.me/56978929295" class="icon-whatsapp"
+				target="_blank"></a></li>
+			<li><a href="" class="icon-instagram" target="_blank"></a></li>
+		</ul>
+	</div>
+	<!-- header design -->
+	<header>
+		<div id="header-information" class="container"></div>
 
-    <nav class="navbar navbar-expand-lg navigation-wrap">
-      <div class="container">
-        <a class="navbar-brand" href="#"><img th:src="@{/images/reciclar1.png}" style="width: 70px; height: 60px;">
-        									</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fas fa-stream navbar-toggler-icon"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#explore-food">Convenios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#testimonial">Recompensas</a>
-            </li>
-            <!--
+		<nav class="navbar navbar-expand-lg navigation-wrap">
+			<div class="container">
+				<a class="navbar-brand" href="#"><img
+					th:src="@{/images/reciclar1.png}"
+					style="width: 70px; height: 60px;"> </a>
+				<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarText"
+					aria-controls="navbarText" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<i class="fas fa-stream navbar-toggler-icon"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarText">
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item"><a class="nav-link active"
+							aria-current="page" href="#home">Inicio</a></li>
+						<li class="nav-item"><a class="nav-link" href="#about">Nosotros</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="#explore-food">Convenios</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="#testimonial">Recompensas</a>
+						</li>
+						<!--
             <li class="nav-item">
               <a id="circulo" class="nav-link" style="color: #fff;" href="">1</a>
             </li>
             -->
-            <form th:action="@{/logout}" method="post">
-	            <li class="nav-item">
-	              <button type="submit" class="main-btn2">
-	                <i class="fas fa-sign-out-alt"></i> Cerrar sesión
-	              </button>
-	            </li>
-            </form>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
+						<form th:action="@{/logout}" method="post">
+							<li class="nav-item">
+								<button type="submit" class="main-btn2">
+									<i class="fas fa-sign-out-alt"></i> Cerrar sesión
+								</button>
+							</li>
+						</form>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
 
-  <!-- section-1 top-banner -->
-  <section id="home">
-    <div class="container-fluid px-0 top-banner" style="background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url('images/rec-2.jpg') no-repeat center;
-    													width:100%;
-													  	background-size:cover;
-													 	 padding:16.875rem 0 9.375rem;">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 text-center">
-            <h2 style="color: #fff;">Bienvenido <b>[[${#request.userPrincipal.principal.fullName}]]</b> </h2>
-            <h1>Recicla y gana puntos!</h1>
-            <p style="margin-top: -30px;">Mientras mas puntos acumules mas recompensas podras reclamar.
-            </p>
-            <div class="mt-4">
-              <button class="main-btn">Agregar puntos <i class="fas fa-plus-circle"></i></button>
-              <button class="white-btn ms-lg-4 mt-lg-0 mt-4" onclick="location.href = '#testimonial';">Reclamar
-                recompensas <i class="fas fa-angle-right ps-3"></i></button>
-              <h3 class="mt-3" style="color: #fff;">Progreso actual</h3>
-              <div class="container progress-bar green stripes shine ">
-                <span style="width: 90%"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+	<!-- section-1 top-banner -->
+	<section id="home">
+		<div class="container-fluid px-0 top-banner"
+			style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/rec-2.jpg') no-repeat center; width: 100%; background-size: cover; padding: 16.875rem 0 9.375rem;">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 text-center">
+						<h2 style="color: #fff;">
+							Bienvenido <b>[[${#request.userPrincipal.principal.fullName}]]</b>
+						</h2>
+						<h1>Recicla y gana puntos!</h1>
+						<p style="margin-top: -30px;">Mientras mas puntos acumules mas
+							recompensas podras reclamar.</p>
+						<div class="mt-4">
+							<button class="main-btn">
+								Agregar puntos <i class="fas fa-plus-circle"></i>
+							</button>
+							<button class="white-btn ms-lg-4 mt-lg-0 mt-4"
+								onclick="location.href = '#testimonial';">
+								Reclamar recompensas <i class="fas fa-angle-right ps-3"></i>
+							</button>
+							<h3 class="mt-3" style="color: #fff;">Progreso actual</h3>
+							<div class="container progress-bar green stripes shine ">
+								<span style="width: 90%"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-  <!-- section-2 counter -->
-  <section id="counter">
-    <section class="counter-section">
-      <div class="container">
-        <h3 class="text-center" style="color: #fff;">Proximamente convenios con las siguientes empresas:</h3>
-          <div class="owl-carousel owl-theme" style="margin-top: 5px;">
-            <div class="item">
-              <img th:src="@{/images/empre-4.jpg}">
-            </div>
-            <div class="item">
-              <img th:src="@{/images/empre-5.jpg}">
-            </div>
-          </div>
-      </div>
-    </section>
-  </section>
+	<!-- section-2 counter -->
+	<section id="counter">
+		<section class="counter-section">
+			<div class="container">
+				<h3 class="text-center" style="color: #fff;">Proximamente
+					convenios con las siguientes empresas:</h3>
+				<div class="owl-carousel owl-theme" style="margin-top: 5px;">
+					<div class="item">
+						<img th:src="@{/images/empre-4.jpg}">
+					</div>
+					<div class="item">
+						<img th:src="@{/images/empre-5.jpg}">
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>
 
-  <!-- section-3 Nosotros-->
-  <section id="about">
-    <div class="about-section wrapper">
-      <div class="container">
-        <h1 class="text-center" style="color: #3BC14A;">¿Quiénes somos?</h1>
-        <div class="row align-items-center">
-          <div class="col-lg-6 col-md-12 mb-lg-0 mb-5">
-            <div class="card border-0">
-              <img th:src="@{/images/rec-1.jpg}" class="img-fluid">
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-12 text-sec">
-            <h2 class="section-tittle">Somos una empresa interesada en cuidar del medio ambiente y a la vez ayudar a las
-              familias de santiago.
-            </h2>
-          </div>
-        </div>
-      </div>
-      <div class="container food-type">
-        <div class="row align-items-center">
-          <div class="col-lg-8 col-md-12 text-sec mb-lg-0 mb-5">
-            <h2 class="section-tittle">Los servicios que queremos suministrar a lo largo de toda la region metropolitana
-              corresponde
-              en instalar puntos de reciclaje en cada comuna, donde el usuario pueda juntar su basura, clasificarla y
-              depositar esta misma en nuestros puntos,
-              despues de realizar el deposito de basura, el usuario podra escanear un codigo QR, este codigo le otorgara
-              puntos que se ingresaran en nuestra pagina web, mientras mas puntos tengas, mas y mejores recompensas
-              podras reclamar.
-              </p>
-          </div>
-          <div class="imagen-2 col-lg-4 col-md-12">
-            <div class="card border-0">
-              <img  th:src="@{/images/rec-8.png}" class="img-fluid">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+	<!-- section-3 Nosotros-->
+	<section id="about">
+		<div class="about-section wrapper">
+			<div class="container">
+				<h1 class="text-center" style="color: #3BC14A;">¿Quiénes somos?</h1>
+				<div class="row align-items-center">
+					<div class="col-lg-6 col-md-12 mb-lg-0 mb-5">
+						<div class="card border-0">
+							<img th:src="@{/images/rec-1.jpg}" class="img-fluid">
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-12 text-sec">
+						<h2 class="section-tittle">Somos una empresa interesada en
+							cuidar del medio ambiente y a la vez ayudar a las familias de
+							santiago.</h2>
+					</div>
+				</div>
+			</div>
+			<div class="container food-type">
+				<div class="row align-items-center">
+					<div class="col-lg-8 col-md-12 text-sec mb-lg-0 mb-5">
+						<h2 class="section-tittle">
+							Los servicios que queremos suministrar a lo largo de toda la
+							region metropolitana corresponde en instalar puntos de reciclaje
+							en cada comuna, donde el usuario pueda juntar su basura,
+							clasificarla y depositar esta misma en nuestros puntos, despues
+							de realizar el deposito de basura, el usuario podra escanear un
+							codigo QR, este codigo le otorgara puntos que se ingresaran en
+							nuestra pagina web, mientras mas puntos tengas, mas y mejores
+							recompensas podras reclamar.
+							</p>
+					</div>
+					<div class="imagen-2 col-lg-4 col-md-12">
+						<div class="card border-0">
+							<img th:src="@{/images/rec-8.png}" class="img-fluid">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-  <!-- section-3 story-->
-  <section id="story">
-    <div class="story-section" 
-    style="background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url('images/rec-7.jpg') no-repeat center;
-    		width:100%;
-			  height:28.125rem;
-			  background-size: cover;
-			  padding-top:100px;
-			  text-align: center;">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="text-content">
-              <h2>¿No sabes como clasificar tu basura?</h2>
-              <p>Pulsa el boton para mas información acerca de como clasificar tu basura correctamente.</p>
-              <button class="main-btn mt-3">Ver mas</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+	<!-- section-3 story-->
+	<section id="story">
+		<div class="story-section"
+			style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/rec-7.jpg') no-repeat center; width: 100%; height: 28.125rem; background-size: cover; padding-top: 100px; text-align: center;">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="text-content">
+							<h2>¿No sabes como clasificar tu basura?</h2>
+							<p>Pulsa el boton para mas información acerca de como
+								clasificar tu basura correctamente.</p>
+							<button class="main-btn mt-3">Ver mas</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-  <!-- section-4 explore food-->
-  <section id="explore-food">
-    <div class="explore-food wrapper">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="text-content text-center">
-              <h2>Convenios</h2>
-              <p>Actualmente tenemos convenios con las siguientes empresas.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row align-items-center">
-          <div class="col-lg-3 col-md-3 col-sm-3">
-              <div class="card mt-5" >
-                  <img  th:src="@{/images/empre-1.jpg}" class="card-img-top" alt="...">
-              </div>
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-3">
-              <div class="card mt-5" >
-                  <img th:src="@{/images/empre-2.jpg}" class="card-img-top" alt="...">
-              </div>
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-3">
-              <div class="card mt-5" >
-                  <img th:src="@{/images/empre-3.png}" class="card-img-top" alt="...">
-              </div>
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-3">
-            <div class="card mt-5" >
-                <img th:src="@{/images/empre-4.jpg}" class="card-img-top" alt="...">
-            </div>
-        </div>
+	<!-- section-4 explore food-->
+	<section id="explore-food">
+		<div class="explore-food wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="text-content text-center">
+							<h2>Convenios</h2>
+							<p>Actualmente tenemos convenios con las siguientes empresas.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row align-items-center">
+					<div class="col-lg-3 col-md-3 col-sm-3">
+						<div class="card mt-5">
+							<img th:src="@{/images/empre-1.jpg}" class="card-img-top"
+								alt="...">
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3">
+						<div class="card mt-5">
+							<img th:src="@{/images/empre-2.jpg}" class="card-img-top"
+								alt="...">
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3">
+						<div class="card mt-5">
+							<img th:src="@{/images/empre-3.png}" class="card-img-top"
+								alt="...">
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3">
+						<div class="card mt-5">
+							<img th:src="@{/images/empre-4.jpg}" class="card-img-top"
+								alt="...">
+						</div>
+					</div>
 
-        <div class="col-lg-3 col-md-3 col-sm-3">
-          <div class="card mt-5" >
-              <img th:src="@{/images/empre-1.jpg}" class="card-img-top" alt="...">
-          </div>
-      </div>
-      <div class="col-lg-3 col-md-3 col-sm-3">
-          <div class="card mt-5" >
-              <img th:src="@{/images/empre-2.jpg}" class="card-img-top" alt="...">
-          </div>
-      </div>
-      <div class="col-lg-3 col-md-3 col-sm-3">
-          <div class="card mt-5" >
-              <img th:src="@{/images/empre-3.png}" class="card-img-top" alt="...">
-          </div>
-      </div>
-      <div class="col-lg-3 col-md-3 col-sm-3">
-        <div class="card mt-5" >
-            <img th:src="@{/images/empre-4.jpg}" class="card-img-top" alt="...">
-        </div>
-    </div>
-      </div>
-    </div>
-  </section>
+					<div class="col-lg-3 col-md-3 col-sm-3">
+						<div class="card mt-5">
+							<img th:src="@{/images/empre-1.jpg}" class="card-img-top"
+								alt="...">
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3">
+						<div class="card mt-5">
+							<img th:src="@{/images/empre-2.jpg}" class="card-img-top"
+								alt="...">
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3">
+						<div class="card mt-5">
+							<img th:src="@{/images/empre-3.png}" class="card-img-top"
+								alt="...">
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3">
+						<div class="card mt-5">
+							<img th:src="@{/images/empre-4.jpg}" class="card-img-top"
+								alt="...">
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>
 
-  <!-- Section-5 testimonial-->
-  <section id="testimonial">
-    <div class="wrapper testimonial-section">
-      <div class="container">
-        <h1 class="text-center">Recompensas</h1>
-        <div class="row">
-          <article class="card fl-left">
-            <section class="date">
-              <img th:src="@{/images/empre-1.jpg}" alt="" class="img-fluid">
-            </section>
-            <section class="card-cont">
-              <small>Nivel 1 Puntos 2000</small>
-              <h3>10% de descuento en Aguas andinas</h3>
-              <div class="even-date">
+	<!-- Section-5 testimonial-->
+	<section id="testimonial">
+		<div class="wrapper testimonial-section">
+			<div class="container">
+				<h1 class="text-center">Recompensas</h1>
+				<div class="row">
+					<article class="card fl-left">
+						<section class="date">
+							<img th:src="@{/images/empre-1.jpg}" alt="" class="img-fluid">
+						</section>
+						<section class="card-cont">
+							<small>Nivel 1 Puntos 2000</small>
+							<h3>10% de descuento en Aguas andinas</h3>
+							<div class="even-date">
 
-                <time>
-                  <span><i class="fa fa-calendar"></i> Ticket valido hasta 28 de Enero 2022</span>
-
-
-                </time>
-              </div>
-              <div class="even-info">
-
-                <p id="p-ticket"><i class="fa fa-map-marker"></i> Disponible en todas las comunas de la region
-                  Metropolitana</p>
-              </div>
-              <a href="#">Usar</a>
-            </section>
-          </article>
-          <article class="card fl-left">
-            <section class="date">
-              <img th:src="@{/images/empre-3.png}" alt="" class="img-fluid">
-            </section>
-            <section class="card-cont">
-              <small>Nivel 1 Puntos 1500</small>
-              <h3>6% de descuento en Gasco</h3>
-              <div class="even-date">
-
-                <time>
-                  <span><i class="fa fa-calendar"></i> Ticket valido hasta 28 de Enero 2022</span>
+								<time>
+									<span><i class="fa fa-calendar"></i> Ticket valido hasta
+										28 de Enero 2022</span>
 
 
-                </time>
-              </div>
-              <div class="even-info">
+								</time>
+							</div>
+							<div class="even-info">
 
-                <p id="p-ticket"><i class="fa fa-map-marker"></i> Disponible en todas las comunas de la region
-                  Metropolitana</p>
-              </div>
-              <a href="#">Usar</a>
-            </section>
-          </article>
+								<p id="p-ticket">
+									<i class="fa fa-map-marker"></i> Disponible en todas las
+									comunas de la region Metropolitana
+								</p>
+							</div>
+							<a href="#">Usar</a>
+						</section>
+					</article>
+					<article class="card fl-left">
+						<section class="date">
+							<img th:src="@{/images/empre-3.png}" alt="" class="img-fluid">
+						</section>
+						<section class="card-cont">
+							<small>Nivel 1 Puntos 1500</small>
+							<h3>6% de descuento en Gasco</h3>
+							<div class="even-date">
 
-        </div>
-        <div class="row">
-          <article class="card fl-left">
-            <section class="date">
-              <img th:src="@{/images/empre-4.jpg}" alt="" class="img-fluid">
-            </section>
-            <section class="card-cont">
-              <small>Nivel 1 Puntos 1700</small>
-              <h3>5% de descuento en Abastible</h3>
-              <div class="even-date">
-
-                <time>
-                  <span><i class="fa fa-calendar"></i> Ticket valido hasta 28 de Enero 2022</span>
-
-
-                </time>
-              </div>
-              <div class="even-info">
-
-                <p id="p-ticket"><i class="fa fa-map-marker"></i> Disponible en todas las comunas de la region
-                  Metropolitana</p>
-              </div>
-              <a href="#">Usar</a>
-            </section>
-          </article>
-          <article class="card fl-left">
-            <section class="date">
-              <img th:src="@{/images/empre-5.jpg}" alt="" class="img-fluid">
-            </section>
-            <section class="card-cont">
-              <small>Nivel 1 Puntos 4000</small>
-              <h3>30% de descuento en Lipigas</h3>
-              <div class="even-date">
-
-                <time>
-                  <span><i class="fa fa-calendar"></i> Ticket valido hasta 28 de Enero 2022</span>
+								<time>
+									<span><i class="fa fa-calendar"></i> Ticket valido hasta
+										28 de Enero 2022</span>
 
 
-                </time>
-              </div>
-              <div class="even-info">
+								</time>
+							</div>
+							<div class="even-info">
 
-                <p id="p-ticket"><i class="fa fa-map-marker"></i> Disponible en todas las comunas de la region
-                  Metropolitana</p>
-              </div>
-              <a href="#">Usado</a>
-            </section>
-          </article>
+								<p id="p-ticket">
+									<i class="fa fa-map-marker"></i> Disponible en todas las
+									comunas de la region Metropolitana
+								</p>
+							</div>
+							<a href="#">Usar</a>
+						</section>
+					</article>
 
-        </div>
-      </div>
-    </div>
-  </section>
+				</div>
+				<div class="row">
+					<article class="card fl-left">
+						<section class="date">
+							<img th:src="@{/images/empre-4.jpg}" alt="" class="img-fluid">
+						</section>
+						<section class="card-cont">
+							<small>Nivel 1 Puntos 1700</small>
+							<h3>5% de descuento en Abastible</h3>
+							<div class="even-date">
 
-  <!-- section-7 book-food-->
-  <section id="book-food">
-    <div class="book-food">
-      <div class="container book-food-text">
-        <div class="row text-center">
-          <div class="col-lg-9 col-md-12">
-            <h2>Baked fresh daily by bakers with passion.</h2>
-          </div>
-          <div class="col-lg-3 col-md-12 mt-lg-0 mt-4">
-            <button class="main-btn">Learn more</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- section-8 newslettar-->
-  <section id="newslettar">
-    <div class="newslettar wrapper">
-      <div class="container">
-        <div class="row">
-          <div class="sol-sm-12">
-            <div class="text-content text-center pb-4">
-              <h2>Hurry up! Subscribe our newsletter
-                and get 25% Off</h2>
-              <p>Limited time offer for this month. No credit card required. </p>
-            </div>
-            <form class="newsletter">
-              <div class="row">
-                <div class="col-md-8 col-12">
-                  <input class="form-control" placeholder="Email Address here" name="email" type="email">
-                </div>
-                <div class="col-md-4 col-12">
-                  <button class="main-btn" type="submit">Subscribe</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- section-9 footer-->
-  <footer id="footer">
-    <div class="footer py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <a class="footer-link" href="#">Register</a>
-            <a class="footer-link" href="#">Forum</a>
-            <a class="footer-link" href="#">Affiliate</a>
-            <a class="footer-link" href="#">FAQ</a>
-            <div class="footer-social pt-4 text-center">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
-              <a href="#"><i class="fab fa-dribbble"></i></a>
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
-          <div class="col-sm-12">
-            <div class="footer-copy">
-              <div class="copy-right text-center pt-5">
-                <p class="text-light">© 2021. Foodies. All rights reserved.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+								<time>
+									<span><i class="fa fa-calendar"></i> Ticket valido hasta
+										28 de Enero 2022</span>
 
 
-  <!-- JS Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
-  <!-- own js -->
-  <script src="js/main.js"></script>
-  <!--Carousel JS-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="js/carousel.js"></script>
+								</time>
+							</div>
+							<div class="even-info">
+
+								<p id="p-ticket">
+									<i class="fa fa-map-marker"></i> Disponible en todas las
+									comunas de la region Metropolitana
+								</p>
+							</div>
+							<a href="#">Usar</a>
+						</section>
+					</article>
+					<article class="card fl-left">
+						<section class="date">
+							<img th:src="@{/images/empre-5.jpg}" alt="" class="img-fluid">
+						</section>
+						<section class="card-cont">
+							<small>Nivel 1 Puntos 4000</small>
+							<h3>30% de descuento en Lipigas</h3>
+							<div class="even-date">
+
+								<time>
+									<span><i class="fa fa-calendar"></i> Ticket valido hasta
+										28 de Enero 2022</span>
+
+
+								</time>
+							</div>
+							<div class="even-info">
+
+								<p id="p-ticket">
+									<i class="fa fa-map-marker"></i> Disponible en todas las
+									comunas de la region Metropolitana
+								</p>
+							</div>
+							<a href="#">Usado</a>
+						</section>
+					</article>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- section-7 book-food-->
+	<section id="book-food">
+		<div class="book-food">
+			<div class="container book-food-text">
+				<div class="row text-center">
+					<div class="col-lg-12 col-md-12">
+						<h2 style="color: #4E6E5D">Ubicaciones de nuestro puntos de
+							reciclaje</h2>
+					</div>
+					<div id="map" class="col-lg-12 col-md-12 mt-5"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- section-8 newslettar-->
+	<section id="newslettar">
+		<div class="newslettar wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="sol-sm-12">
+						<div class="text-content text-center pb-4">
+							<h2>Hurry up! Subscribe our newsletter and get 25% Off</h2>
+							<p>Limited time offer for this month. No credit card
+								required.</p>
+						</div>
+						<form class="newsletter">
+							<div class="row">
+								<div class="col-md-8 col-12">
+									<input class="form-control" placeholder="Email Address here"
+										name="email" type="email">
+								</div>
+								<div class="col-md-4 col-12">
+									<button class="main-btn" type="submit">Subscribe</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- section-9 footer-->
+	<footer id="footer">
+		<div class="footer py-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<a class="footer-link" href="#">Register</a> <a
+							class="footer-link" href="#">Forum</a> <a class="footer-link"
+							href="#">Affiliate</a> <a class="footer-link" href="#">FAQ</a>
+						<div class="footer-social pt-4 text-center">
+							<a href="#"><i class="fab fa-facebook-f"></i></a> <a href="#"><i
+								class="fab fa-twitter"></i></a> <a href="#"><i
+								class="fab fa-youtube"></i></a> <a href="#"><i
+								class="fab fa-dribbble"></i></a> <a href="#"><i
+								class="fab fa-linkedin"></i></a> <a href="#"><i
+								class="fab fa-instagram"></i></a>
+						</div>
+					</div>
+					<div class="col-sm-12">
+						<div class="footer-copy">
+							<div class="copy-right text-center pt-5">
+								<p class="text-light">© 2021. Foodies. All rights reserved.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- JS Libraries -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
+	<!-- own js -->
+	<script src="js/main.js"></script>
+	<!--Carousel JS-->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+		integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="js/carousel.js"></script>
+	<script src="js/googlemap.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSViNnVUPdLXp0lFTMf70x1IH5jHyboWs&callback=iniciarMap"></script>
+<!-- 	<script -->
+<!-- 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSViNnVUPdLXp0lFTMf70x1IH5jHyboWs&callback=initMap&v=weekly" -->
+<!-- 		async></script> -->
 </body>
 
 </html>

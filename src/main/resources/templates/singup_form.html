@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Registrar</title>
+	<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+	<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container text-center mt-5">
+		
+		<div>
+		<h1>Registrar Usuario - Sing Up</h1>
+		</div>
+		
+		<form th:action="@{/process_register}" th:object="${user}"
+            method="post" style="max-width: 600px; margin: 0 auto;">
+			<div class="m-3">
+				<div class="form-group row">
+						<label class="col-form-label col-4">E-mail</label>
+						<div class="col-8">
+							<input type="email" class="form-control" th:field="*{email}" required/>
+						</div>
+						
+				</div>
+			</div>
+			
+			<div class="m-3">
+				<div class="form-group row">
+						<label class="col-form-label col-4">Password</label>
+						<div class="col-8">
+							<input type="password" class="form-control" th:field="*{password}" required
+							minlength="6" maxlength="20"/>
+						</div>
+						
+				</div>
+			</div>
+			
+			<div class="m-3">
+				<div class="form-group row">
+						<label class="col-form-label col-4">Nombre</label>
+						<div class="col-8">
+							<input type="text" class="form-control" th:field="*{firstName}" required
+							minlength="2" maxlength="20"/>
+						</div>
+						
+				</div>
+			</div>
+			
+			<div class="m-3">
+				<div class="form-group row">
+						<label class="col-form-label col-4">Apellido</label>
+						<div class="col-8">
+							<input type="text" class="form-control" th:field="*{lastName}" required
+							minlength="2" maxlength="20"/>
+						</div>
+						
+				</div>
+				
+				<div>
+					<button type="submit" class="btn btn-primary">Registrar</button>
+				</div>
+			</div>
+		</form>
+		
+		
+	</div>
+	
+</body>
+</html>

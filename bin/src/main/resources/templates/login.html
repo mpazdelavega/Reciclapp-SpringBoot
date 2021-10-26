@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+  <head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}"></link>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+      <div class="front">
+        <img th:src="@{/images/login-img3.jpg}">
+        <div class="text">
+          <span class="text-1">Más que una obligación, <br> reciclar es una necesidad.</span>
+          <span class="text-2">Recicla con nosotros.</span>
+        </div>
+      </div>
+      <div class="back">
+        <img th:src="@{/images/login-img4.jpg}">
+        <div class="text">
+          <span class="text-1">Recicla, por que <br> no hay mejor planeta que este.</span>
+          <span class="text-2">Empieza ahora.</span>
+        </div>
+      </div>
+    </div>
+    <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            <div class="title">Login</div>
+          <form th:action="@{/login}" method="post">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="text" id="username" name="email" placeholder="Ingrese su email" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
+              </div>
+              <div th:if="${param.error}"  style="color: #f44336; font-size: 13px">
+		            Correo y/o contraseña incorrecta
+		        </div>
+		        <div th:if="${param.logout}"  style="color: #31e981; font-size: 13px">
+		            <i>Sesión cerrada</i> 
+		        </div>
+		        <div th:if="${invalidSession}" style="color: #f44336;">
+		            <p th:text="${invalidSession}" ></p>
+		        </div>
+              <div class="text"><a href="#" style="color: #3BC14A;">Recuperar contraseña</a></div>
+              <div class="button input-box">
+                <input name="_csrf" type="hidden" value="a970ab62-575a-40a6-a4e4-d844a48581ca" />
+                <input type="submit" value="Ingresar">
+              </div>
+              <div class="text sign-up-text">¿No tienes una cuenta? <label for="flip">Registrate ahora</label></div>
+            </div>
+        </form>
+      </div>
+        <div class="signup-form">
+          <div class="title">Registro</div>
+        <form th:action="@{/process_register}" th:object="${user}" method="post"
+        onsubmit="return validateForm()">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-user"></i>
+                <input type="text" name="firstName" placeholder="Ingrese su nombre" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-user"></i>
+                <input type="text" name="lastName" placeholder="Ingrese su apellido" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="email" placeholder="Ingrese su email" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="password" placeholder="Ingrese su contraseña" required>
+              </div>
+              <div class="g-recaptcha" th:data-sitekey="${@environment.getProperty('recaptcha.key')}">
+              </div>
+              <div class="button input-box">
+                <input type="submit" value="Crear cuenta">
+              </div>
+              <div class="text sign-up-text">¿Ya tienes una cuenta? <label for="flip">Ingresa ahora</label></div>
+            </div>
+      </form>
+    </div>
+    </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+  	function validateForm(){
+  		if(grecaptcha.getResponse()){
+  			return true;
+  		} else{
+  			alert("Comprueba que no eres un robot, Por Favor!");
+  			return false;
+  			
+  		}
+  		
+  	}
+  </script>
+</body>
+</html>
